@@ -1,22 +1,20 @@
 import ArtworkCard from "../../components/gallery/ArtworkCard";
+import candleGirl from "../../assets/sketches/candle-girl.jpg";
+import ShamanLook from "../../assets/sketches/Shaman-drawing.jpg";
 const artworks = [
   {
     id: 1,
     title: "Candlelight Girl",
     category: "Graphite",
     medium: "Graphite on Paper",
+    image: candleGirl,
   },
   {
     id: 2,
-    title: "Crystal Study",
+    title: "Shaman's Look",
     category: "Sketch",
     medium: "Sketch",
-  },
-  {
-    id: 3,
-    title: "Dream Pill",
-    category: "Watercolor",
-    medium: "Color Pencil",
+    image: ShamanLook,
   },
 ];
 
@@ -54,6 +52,7 @@ function ArtGallery() {
               key={artwork.id}
               title={artwork.title}
               category={artwork.category}
+              image={artwork.image}
             />
           ))}
         </div>

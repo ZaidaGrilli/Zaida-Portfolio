@@ -1,18 +1,21 @@
 type ArtworkCardProps = {
   title: string;
   category: string;
+  image: string;
 };
 
-function ArtworkCard({ title, category }: ArtworkCardProps) {
+function ArtworkCard({ title, category, image }: ArtworkCardProps) {
   return (
-    <article className="artwork-card flex h-64 flex-col justify-end rounded-2xl bg-rose-100 p-6 transition duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg">
-      <p className="artwork-card__category text-sm uppercase tracking-[0.25em] text-stone-500">
-        {category}
-      </p>
+    <article className="overflow-hidden rounded-3xl bg-rose-100 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+      <img
+        src={image}
+        alt={title}
+        className="h-72 w-full rounded-xl bg-amber-50 object-contain"
+      />
 
-      <h3 className="artwork-card__title mt-2 text-2xl font-semibold text-stone-800">
-        {title}
-      </h3>
+      <p className="mt-4 text-sm uppercase text-stone-500">{category}</p>
+
+      <h3 className="mt-2 text-2xl font-semibold text-stone-800">{title}</h3>
     </article>
   );
 }
