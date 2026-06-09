@@ -4,7 +4,7 @@ function Home() {
     <main>
       <section className="relative flex min-h-screen bg-rose-50">
         <Link
-          to="/art-gallery"
+          to="/art"
           className="flex flex-1 items-center justify-center bg-pink-100 transition hover:bg-pink-200"
         >
           <h2 className="text-4xl font-semibold text-stone-800">Art Gallery</h2>
